@@ -9,7 +9,7 @@
     <title>{{page.title}}</title>
   {% elsif layout["layout"] == "category" %}
     {% unless site.active_lang == 'ko' %}
-    <title>{% assign word = page.category %}{% localization word %}</title>
+    <title>{% assign word = page.category %}{% localize word %}</title>
     {% else %}
       <title>{{page.title}}</title>
     {% endunless %}
