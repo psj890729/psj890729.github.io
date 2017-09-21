@@ -1,17 +1,16 @@
-source 'https://rubygems.org'
-
+source "https://rubygems.org"
 gemspec
 
-gem 'stackprof', platforms: :mri
+# If you've just forked the repo,
+# please remove the content above and uncomment the following before bundling.
+#
+# source "https://rubygems.org"
 
-group :benchmark, :test do
-  gem 'benchmark-ips'
-end
+# gem 'jekyll', '= 3.4.5' # locked in to be consistent GitHub Pages.
 
-group :test do
-  gem 'rubocop', '0.34.2'
-
-  platform :mri do
-    gem 'liquid-c', github: 'Shopify/liquid-c', ref: 'bd53db95de3d44d631e7c5a267c3d934e66107dd'
-  end
-end
+# group :jekyll_plugins do
+#   gem 'jekyll-feed'
+#   gem 'jekyll-redirect-from'
+#   gem 'jekyll-seo-tag'
+#   gem 'jekyll-sitemap'
+# end

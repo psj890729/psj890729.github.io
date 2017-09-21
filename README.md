@@ -1,106 +1,155 @@
-[![Build Status](https://api.travis-ci.org/Shopify/liquid.svg?branch=master)](http://travis-ci.org/Shopify/liquid)
-[![Inline docs](http://inch-ci.org/github/Shopify/liquid.svg?branch=master)](http://inch-ci.org/github/Shopify/liquid)
+# Simple Texture Jekyll Theme
 
-# Liquid template engine
+![Gem Version](https://img.shields.io/gem/v/jekyll-theme-simple-texture.svg)
 
-* [Contributing guidelines](CONTRIBUTING.md)
-* [Version history](History.md)
-* [Liquid documentation from Shopify](http://docs.shopify.com/themes/liquid-basics)
-* [Liquid Wiki at GitHub](https://github.com/Shopify/liquid/wiki)
-* [Website](http://liquidmarkup.org/)
+Simple Texture is a gem-based responsive simple texture styled Jekyll theme for [Jekyll][Jekyll] 3.3 or above,
+which can also be forked as a boilerplate for older versions of Jekyll.
 
-## Introduction
+## Demo
 
-Liquid is a template engine which was written with very specific requirements:
+- Starter-kit demo:
+<https://yizeng.github.io/jekyll-theme-simple-texture/>
+- My own personal blog: <http://yizeng.me/blog>
 
-* It has to have beautiful and simple markup. Template engines which don't produce good looking markup are no fun to use.
-* It needs to be non evaling and secure. Liquid templates are made so that users can edit them. You don't want to run code on your server which your users wrote.
-* It has to be stateless. Compile and render steps have to be separate so that the expensive parsing and compiling can be done once and later on you can just render it passing in a hash with local variables and objects.
+![Screenshot - Home](assets/images/screenshots/home.png)
 
-## Why you should use Liquid
+![Screenshot - Blog](assets/images/screenshots/post.png)
 
-* You want to allow your users to edit the appearance of your application but don't want them to run **insecure code on your server**.
-* You want to render templates directly from the database.
-* You like smarty (PHP) style template engines.
-* You need a template engine which does HTML just as well as emails.
-* You don't like the markup of your current templating engine.
+## Installation
 
-## What does it look like?
+### As a Jekyll theme gem (Jekyll >= 3.3)
 
-```html
-<ul id="products">
-  {% for product in products %}
-    <li>
-      <h2>{{ product.name }}</h2>
-      Only {{ product.price | price }}
+If you are creating a new website or blog,
+please follow the commands below first:
 
-      {{ product.description | prettyprint | paragraph }}
-    </li>
-  {% endfor %}
-</ul>
-```
+1. Install Jekyll and [Bunlder][Bunlder]
 
-## How to use Liquid
+       gem install jekyll bundler
 
-Liquid supports a very simple API based around the Liquid::Template class.
-For standard use you can just pass it the content of a file and call render with a parameters hash.
+2. Create a new Jekyll app
 
-```ruby
-@template = Liquid::Template.parse("hi {{name}}") # Parses and compiles the template
-@template.render('name' => 'tobi')                # => "hi tobi"
-```
+       jekyll new jekyllapp
 
-### Error Modes
+3. Enter the new directory
 
-Setting the error mode of Liquid lets you specify how strictly you want your templates to be interpreted.
-Normally the parser is very lax and will accept almost anything without error. Unfortunately this can make
-it very hard to debug and can lead to unexpected behaviour. 
+       cd jekyllapp
 
-Liquid also comes with a stricter parser that can be used when editing templates to give better error messages
-when templates are invalid. You can enable this new parser like this:
+Then for newly created or existing Jekyll app,
 
-```ruby
-Liquid::Template.error_mode = :strict # Raises a SyntaxError when invalid syntax is used
-Liquid::Template.error_mode = :warn # Adds errors to template.errors but continues as normal
-Liquid::Template.error_mode = :lax # The default mode, accepts almost anything.
-```
+1. Install Bundler if haven't done so.
 
-If you want to set the error mode only on specific templates you can pass `:error_mode` as an option to `parse`:
-```ruby
-Liquid::Template.parse(source, :error_mode => :strict)
-```
-This is useful for doing things like enabling strict mode only in the theme editor.
+       gem install bundler
 
-It is recommended that you enable `:strict` or `:warn` mode on new apps to stop invalid templates from being created.
-It is also recommended that you use it in the template editors of existing apps to give editors better error messages.
+2. Remove Jekyll auto-generated default pages `about.md` and `index.md`.
 
-### Undefined variables and filters
+3. Download the respository [here](https://github.com/yizeng/jekyll-theme-simple-texture/archive/master.zip)
+and locate `starter-kit` folder,
+or download `starter-kit` folder directly [here](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/yizeng/jekyll-theme-simple-texture/tree/master/starter-kit).
 
-By default, the renderer doesn't raise or in any other way notify you if some variables or filters are missing, i.e. not passed to the `render` method.
-You can improve this situation by passing `strict_variables: true` and/or `strict_filters: true` options to the `render` method.
-When one of these options is set to true, all errors about undefined variables and undefined filters will be stored in `errors` array of a `Liquid::Template` instance.
-Here are some examples:
+4. Put everything in the `starter-kit` in the root directory,
+i.e. `jekyllapp` in this example.
 
-```ruby
-template = Liquid::Template.parse("{{x}} {{y}} {{z.a}} {{z.b}}")
-template.render({ 'x' => 1, 'z' => { 'a' => 2 } }, { strict_variables: true })
-#=> '1  2 ' # when a variable is undefined, it's rendered as nil
-template.errors
-#=> [#<Liquid::UndefinedVariable: Liquid error: undefined variable y>, #<Liquid::UndefinedVariable: Liquid error: undefined variable b>]
-```
+5. Run `bundle install` to install dependencies.
 
-```ruby
-template = Liquid::Template.parse("{{x | filter1 | upcase}}")
-template.render({ 'x' => 'foo' }, { strict_filters: true })
-#=> '' # when at least one filter in the filter chain is undefined, a whole expression is rendered as nil
-template.errors
-#=> [#<Liquid::UndefinedFilter: Liquid error: undefined filter filter1>]
-```
+6. Run Jekyll with `bundle exec jekyll serve`
 
-If you want to raise on a first exception instead of pushing all of them in `errors`, you can use `render!` method:
+7. Hack away at <http://localhost:4000>!
 
-```ruby
-template = Liquid::Template.parse("{{x}} {{y}}")
-template.render!({ 'x' => 1}, { strict_variables: true })
-#=> Liquid::UndefinedVariable: Liquid error: undefined variable y
-```
+### As a fork
+
+1. Fork the repo [here](https://github.com/yizeng/jekyll-theme-simple-texture#fork-destination-box)
+
+2. Clone the repo just forked.
+
+       git clone git@github.com:[YOUR_USERNAME]/jekyll-theme-simple-texture.git
+
+3. Delete `starter-kit` folder and `jekyll-theme-simple-texture.gemspec` file (they're for people installing via gem)
+
+4. Install Bundler if haven't done so.
+
+       gem install bundler
+
+5. Update the `Gemfile` to look like the following:
+
+   ```ruby
+   source "https://rubygems.org"
+
+   gem 'jekyll', '= 3.4.5' # locked in to be consistent GitHub Pages.
+
+   group :jekyll_plugins do
+     gem 'jekyll-feed'
+     gem 'jekyll-redirect-from'
+     gem 'jekyll-seo-tag'
+     gem 'jekyll-sitemap'
+   end
+   ```
+
+6. Run `bundle install` to install dependencies.
+
+7. Run Jekyll with `bundle exec jekyll serve`
+
+8. Hack away at <http://localhost:4000>!
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at <https://github.com/yizeng/jekyll-theme-simple-texture>. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+
+## Credits
+
+- [Jekyll][Jekyll]
+  + [jekyll-feed](https://github.com/jekyll/jekyll-feed)
+  + [jekyll-redirect-from](https://github.com/jekyll/jekyll-redirect-from)
+  + [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag)
+  + [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap)
+  + [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search)
+  + [Jekyll-Bootstrap](http://jekyllbootstrap.com/)
+  + [theme-the-program](https://github.com/jekyllbootstrap/theme-the-program)
+
+- [Sass](http://sass-lang.com/)
+  + [Normalize.css](https://necolas.github.io/normalize.css/)
+  + [Animate.css](https://daneden.github.io/animate.css/)
+  + [Simple Icons](https://simpleicons.org/)
+  + [Noise Texture Generator](http://www.noisetexturegenerator.com/)
+- JavaScript
+  + [cdnjs](https://cdnjs.com/)
+  + [jQuery](https://jquery.com/)
+  + [fullPage.js](https://alvarotrigo.com/fullPage/)
+  + [pace.js](http://github.hubspot.com/pace/docs/welcome/)
+  + [Modernizr](https://modernizr.com/)
+  + [FancyBox](http://fancybox.net/)
+  + [unveil.js](http://luis-almeida.github.io/unveil/)
+- Fonts
+  + [Font Squirrel](https://www.fontsquirrel.com/)
+  + [Bitter](https://fonts.google.com/specimen/Bitter)
+  + [Junge](https://fonts.google.com/specimen/Junge)
+  + [Ubuntu Condensed](https://fonts.google.com/specimen/Ubuntu+Condensed)
+
+## License
+
+The theme is available as open source under the terms of the
+[MIT License](https://github.com/yizeng/jekyll-theme-simple-texture/blob/master/LICENSE).
+
+    MIT License
+
+    Copyright (c) 2017 Yi Zeng
+
+    Permission is hereby granted, free of charge, to any person obtaining a copy
+    of this software and associated documentation files (the "Software"), to deal
+    in the Software without restriction, including without limitation the rights
+    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+    copies of the Software, and to permit persons to whom the Software is
+    furnished to do so, subject to the following conditions:
+
+    The above copyright notice and this permission notice shall be included in all
+    copies or substantial portions of the Software.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+    SOFTWARE.
+
+[Jekyll]: http://jekyllrb.com/
+[Bunlder]: http://bundler.io/
