@@ -8,13 +8,11 @@ suji:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
+    테스트 하는 박수지 입니다.
     
-    박수지 입니다.
-    소프트웨어 테스트 하는 박수지 입니다.
-    하하
+    감사합니다.
     
-    Open `_data/authors.yml` to edit this text.
-
+    
   # This photo will be used in the about section
   picture:
     src:             https://placehold.it/128x128
