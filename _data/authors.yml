@@ -27,8 +27,8 @@ suji:
   # Comment/uncommet to show/hide
   # Icons appear in order, can be rearranged:
   social:
-    # facebook:        <username>
-    twitter:         <username>
+    facebook:        suji.park89
+    # twitter:         <username>
     # google:          <number>
     # vk:              <username>
     # youtube:         <string_string_string>
@@ -37,7 +37,7 @@ suji:
     # spotify:         <user>/<number>
     # soundcloud:      <username>
     # lastfm:          <username>
-    # instagram:       <username>
+    instagram:       psj890729
     # flickr:          <string@string>
     # 500px:           <username>
     # dribbble:        <username>
@@ -51,7 +51,7 @@ suji:
     # pinterest:       <username>
     # foursquare:      <number>
     # yelp:            <string>
-    github:          <username>
+    github:          psj890729
     # stackoverflow:   <number/username>
     # npm:             <username>
     # hackernews:      <username>
@@ -62,8 +62,8 @@ suji:
     # delicious:       <username>
     # stumbleupon:     <username>
     # paypal:          <username>
-    email:           mailto:<mail@domain.tld>
-    rss:             https://<url>/feed.xml
+    email:           mailto:<psj890729@gmail.com>
+    # rss:             https://<url>/feed.xml
 
 # Another author
 mdo:
