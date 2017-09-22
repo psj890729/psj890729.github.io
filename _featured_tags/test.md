@@ -3,7 +3,7 @@ layout: list
 title: 테스트
 slug: TEST
 menu: true
-order: 1
+order: 2
 description: >
   소프트웨어 테스트에 대한 나의 생각 정리 
   
