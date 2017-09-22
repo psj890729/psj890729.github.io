@@ -2,7 +2,7 @@
 layout: page
 title: 페이지 만들기
 redirect_from:
-  - /docs_github_blog/latest/create_page/
+  - /docs_github_blog/create_page/
   - /docs_github_blog/create_page/
 ---
 
