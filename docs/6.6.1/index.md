@@ -2,7 +2,7 @@
 layout: page
 title: Documentation
 menu: false
-order: 5
+order: 6
 redirect_from:
   - /docs/latest/
   - /docs/
