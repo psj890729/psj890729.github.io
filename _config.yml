@@ -19,10 +19,9 @@ tagline:            수지의 테스트 블로그
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         >
   수지의 테스트 블로그 입니다.
-  (__)
-  아직 만드는 중
-  다 만들려면 멀었음..
-  ㅋㅋㅋ
+  github page를 이용하여 만들고 있습니다.
+  너무 어렵당
+  ㅋㅋ
 
 # This should be the same author as first entry in `_data/authors.yml`
 author: 
@@ -30,8 +29,8 @@ author:
   email:             psj890729@gmail.com
 
 # Fallback image and color
-image:               /psj890729/assets/img/nap.jpg
-color:               '#4f86aa'
+image:               /psj890729.github.io/assets/img/nap.jpg
+color:               '#4b96e6'
 
 # The font used for headings. Expects a string that is a valid CSS font-family value.
 font_heading:        "'Roboto Slab', Helvetica, Arial, sans-serif"
