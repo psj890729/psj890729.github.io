@@ -1,6 +1,6 @@
 ---
 layout: list
-title: 테스
+title: 테스트
 slug: TEST
 menu: true
 order: 1
