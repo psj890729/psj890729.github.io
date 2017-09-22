@@ -5,7 +5,12 @@ menu: true
 order: 3
 ---
 
-## Theme
-[blog]
+## 정보
+판교에서 일하고 있는 테스트 엔지니어 입니다.
+그냥 블로그 만들어보는 중..
 
-[blog]: https://qwtel.com/hydejack/blog/
+
+## Blog Theme
+[Link]
+
+[Link]: https://qwtel.com/hydejack/blog/
