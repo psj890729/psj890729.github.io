@@ -18,9 +18,9 @@ tagline:            수지의 테스트 블로그
 # A short description of the page, used in the sidebar and as fallback for the meta description tag.
 # Markdown enabled, but don't use more than one paragraph (enforced by `>`)
 description:         >
-  수지의 테스트 블로그 입니다.
+  개인 블로그 입니다.
   블로그를 만들어보고 있습니다.
-  너무나 어렵습니다ㅋㅋㅋㅋㅋㅋ
+  너무나 어렵다..
 
 # This should be the same author as first entry in `_data/authors.yml`
 author: 

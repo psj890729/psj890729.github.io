@@ -9,9 +9,7 @@ suji:
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
     안녕하세요.
-    박수지 입니다.
-    블로그를 만드는 중
-    -_-
+    NHN Entertainment Service에서 [TOAST Cloud](http://cloud.toast.com) 테스트를 하고있는 테스트 엔지니어 입니다.
     
     `hello world!!`
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Github Blog
+title: Github Page Blog
 menu: true
 order: 5
 redirect_from:
