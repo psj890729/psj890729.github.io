@@ -6,7 +6,8 @@ redirect_from:
   - /docs_github_blog/dev/
 ---
 
-* 설치 -- [Jekyll]을 먼저 설치한다. 
+* Ruby 설치 
+* [Jekyll](https://jekyllrb.com/) 설치 
 ```
 $ cd psj890729.github.io
 $ bundle install
@@ -16,6 +17,6 @@ $ bundle install
 $ bundle exec jekyll serve
 $ open http://localhost:4000
 ```
-* 배포 -- github에 push만 해주면 됨
+* 배포 -- github에 push
 
-[Jekyll]: https://jekyllrb.com/
+
