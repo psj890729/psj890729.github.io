@@ -22,9 +22,3 @@ order: 6
 
 블로그를 만드는 중..
 
-
-
-## Blog Theme
-[Link]
-
-[Link]: https://qwtel.com/hydejack/blog/

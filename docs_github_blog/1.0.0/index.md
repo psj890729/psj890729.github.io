@@ -21,7 +21,7 @@ redirect_from:
 * [페이지만들기]{:.heading data-flip="title"} -- 새로운 페이지나 포스트를 작성하는 방법 
 
 ---
-### TODO List
+## TODO List
 - Ruby 더 잘 알기
 - Jekyll에 대해서도 더 잘 알기 
 - 댓글 시스템 적용해 보기 
@@ -29,6 +29,11 @@ redirect_from:
 - 글꼴 바꾸기 
 
 
+
+## Blog Theme
+[Link]
+
+[Link]: https://qwtel.com/hydejack/blog/
 [페이지만들기]: create_page
 [개발환경 세팅과 배포]: dev
 
