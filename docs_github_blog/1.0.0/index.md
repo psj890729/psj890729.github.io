@@ -17,8 +17,11 @@ redirect_from:
 
 
 ## 블로그 관리 
-
 * [페이지만들기]{:.heading data-flip="title"} -- 새로운 페이지나 포스트를 작성하는 방법 
+* authors 정보 바꾸기 -- _data/authors.yml 내용을 바꾼다.
+* 왼쪽 메뉴 리스트 바꾸기 -- _featured_tags 폴더에서 관리하거나 page의 menu=true 값을 변경한다.
+
+
 
 ---
 ## TODO List

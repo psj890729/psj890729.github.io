@@ -8,11 +8,8 @@ suji:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    안녕하세요.
-    NHN Entertainment Service에서 [TOAST Cloud](http://cloud.toast.com) 테스트를 하고있는 테스트 엔지니어 입니다.
-    
-    `hello world!!`
-
+   테스트하는 수지입니돠 
+   
   # This photo will be used in the about section
   picture:
     src:             /assets/img/instagramprofile.jpg
