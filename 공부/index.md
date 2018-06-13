@@ -41,6 +41,9 @@ redirect_from:
 
 ## WEB
 - status code
+- http
+- https 
+
 
 
 
