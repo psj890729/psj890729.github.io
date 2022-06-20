@@ -129,3 +129,8 @@ compress_html:
 
 sass:
   style:             compressed
+  
+  
+  
+excerpt_seperator:  <!--break-->
+
